@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ProductsModel extends Model
 {
-    use HasFactory;
+    protected $table = "products";
+    public $timestamps = false;
+    public $fillabl = ['ProductName','SupplierID','CatedoryID','Unit','Price'];
 }

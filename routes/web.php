@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Ventas', [VentasController::class,'view']);
+Route::get('Ventas', [VentasController::class,'view']);
+Route::post('Save', [VentasController::class,'save']);
