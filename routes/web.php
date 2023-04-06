@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('Ventas', [VentasController::class,'view']);
 Route::post('Save', [VentasController::class,'save']);
+Route::get('List-Products',[VentasController::class,'view_list_of_products']);

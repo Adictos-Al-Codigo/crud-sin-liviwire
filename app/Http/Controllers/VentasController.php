@@ -21,4 +21,9 @@ class VentasController extends Controller
         $product->save();
         return redirect('Ventas');
     }
+
+    public function view_list_of_products(){
+        $products= ProductsModel::all();
+        return view('Pages.view_list_of_products',compact('products'));
+    }
 }

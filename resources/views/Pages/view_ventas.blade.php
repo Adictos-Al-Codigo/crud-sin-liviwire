@@ -21,6 +21,7 @@
             <label for="price" class="form-text">Precio</label>
             <input id="price" step="0.01" type="number" class="form-control mt-2  p-1" name="price">
             <button type="submit" class="btn btn-danger mt-3">Enviar</button>
+            <a href="{{url('List-Products')}}"><button type="button" class="btn btn-primary mt-3">Ver Productos</button></a>
         </form>
     </div>
 </body>
