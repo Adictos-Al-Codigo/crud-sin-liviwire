@@ -32,7 +32,7 @@
               <td>&dollar;{{$product->Price}}</td>
               <td>
                 <a href="{{url('Edit'. $product->id)}}"><i class="bi bi-pencil-square"></i></a>
-                <a href=""><i class="bi bi-trash3"></i></a>
+                <a href="{{url('Delete'. $product->id)}}"><i class="bi bi-trash3"></i></a>
               </td>
             </tr>
           @endforeach

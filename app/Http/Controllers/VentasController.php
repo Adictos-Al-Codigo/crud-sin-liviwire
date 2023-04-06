@@ -23,7 +23,7 @@ class VentasController extends Controller
     }
 
     public function view_list_of_products(){
-        $products= ProductsModel::all();
+        $products= ProductsModel::where('Estado',false)->get();
         return view('Pages.view_list_of_products',compact('products'));
     }
 
@@ -39,6 +39,13 @@ class VentasController extends Controller
         $product->CatedoryID = $request->category;
         $product->Unit = $request->unit;
         $product->Price = $request->price;
+        $product->save();
+        return redirect('List-Products');
+    }
+
+    public function delete($id){
+        $product = ProductsModel::find($id);
+        $product->Estado = true;
         $product->save();
         return redirect('List-Products');
     }

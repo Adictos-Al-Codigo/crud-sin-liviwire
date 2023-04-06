@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('CatedoryID');
             $table->integer('Unit');
             $table->decimal('Price');
+            $table->boolean('Estado')->default(false);
         });
     }
 

@@ -23,3 +23,4 @@ Route::post('Save', [VentasController::class,'save']);
 Route::get('List-Products',[VentasController::class,'view_list_of_products']);
 Route::get('Edit{id}',[VentasController::class,'edit']);
 Route::post('Update{id}',[VentasController::class,'update']);
+Route::get('Delete{id}',[VentasController::class,'delete']);
