@@ -26,4 +26,20 @@ class VentasController extends Controller
         $products= ProductsModel::all();
         return view('Pages.view_list_of_products',compact('products'));
     }
+
+    public function edit($id){
+        $object = ProductsModel::find($id);
+        return view('Pages.show_edit_product',compact('object'));
+    }
+
+    public function update(Request $request, $id){
+        $product = ProductsModel::find($id);
+        $product->ProductName = $request->product_name;
+        $product->SupplierID = $request->supplier;
+        $product->CatedoryID = $request->category;
+        $product->Unit = $request->unit;
+        $product->Price = $request->price;
+        $product->save();
+        return redirect('List-Products');
+    }
 }
